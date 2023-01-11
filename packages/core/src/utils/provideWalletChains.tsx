@@ -1,6 +1,7 @@
 import * as SorobanClient from "soroban-client";
 import { isNotNullish } from './isNotNullish';
-import type { WalletChain, ChainMetadata, ChainName} from '@soroban-react/types';
+import type { WalletChain, ChainMetadata} from '@soroban-react/types';
+import type {ChainName} from '@soroban-react/chains';
 
 // Sourced from https://github.com/tmm/wagmi/blob/main/packages/core/src/constants/chains.ts
 // This is just so we can clearly see which of wagmi's first-class chains we provide metadata for
@@ -34,9 +35,9 @@ const chainMetadataByName: Record<ChainName, ChainMetadata> = {
     iconBackground: '#dac695',
     // iconUrl: async () => (await import('./chainIcons/futurenet.svg')).default,
   },
-  standalone: {
-    id: "standalone",
-    name: "Standalone",
+  localnet: {
+    id: "localnet",
+    name: "Localnet",
     networkPassphrase: "Standalone Network ; February 2017",
     iconBackground: '#dac695',
     // iconUrl: async () => (await import('./chainIcons/futurenet.svg')).default,

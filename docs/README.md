@@ -14,7 +14,8 @@ yarn add soroban-client
 ### 2. Set your allowed chains for your Dapp
 ```
 import * as SorobanClient from "soroban-client";
-import type {ChainMetadata, ChainName} from '@soroban-react/types';
+import type {ChainMetadata} from '@soroban-react/types';
+import type {ChainName} from '@soroban-react/chains';
 
 export const allowedChains: Record<ChainName, ChainMetadata> = {
   public: {
@@ -37,9 +38,9 @@ export const allowedChains: Record<ChainName, ChainMetadata> = {
     name: "Sandbox",
     networkPassphrase: SorobanClient.Networks.SANDBOX,
   },
-  standalone: {
-    id: "standalone",
-    name: "Standalone",
+  localnet: {
+    id: "localnet",
+    name: "Localnet",
     networkPassphrase: "Standalone Network ; February 2017",
   },
 };
